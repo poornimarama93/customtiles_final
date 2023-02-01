@@ -1,0 +1,26 @@
+ <mvc:View controllerName="tutorial.launchpage.controller.MainView"
+  displayBlock="true"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc">
+  
+                    <GenericTile
+                        backgroundImage="{value: 'tutorial2/flphomepage/images/ice-cream.jpg',
+                        formatter: 'sap.ui.require.toUrl'}"
+                        state="{news>/state}"
+                        frameType="TwoByOne" press="onPress">
+                        <tileContent>
+                            <TileContent
+                                footer="{
+                                    path: 'news>/date',
+                                    formatter: '.formatJSONDate'
+                                }">
+                                <content>
+                                    <NewsContent
+                                        contentText="{news>/content}"
+                                        subheader="{news>/subheader}">
+                                    </NewsContent>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+</mvc:View>

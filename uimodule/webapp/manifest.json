@@ -142,5 +142,10 @@
   },
   "sap.cloud": {
     "service": "products.service"
-  }
+  },
+  "sap.cloud.portal": {
+    "uimodule-display": {
+        "vizType": "tutorial.launchpage"
+    }
+}
 }

@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "ui5 serve --config=uimodule/ui5.yaml  --open test/flpSandbox.html",
-    "build:ui": "run-s  build:uimodule",
+    "build:ui": "run-s  build:uimodule build:launchpage",
     "test": "run-s lint karma",
     "karma-ci": "karma start karma-ci.conf.js",
     "clearCoverage": "shx rm -rf coverage",
@@ -14,7 +14,9 @@
     "deploy:cf": "cross-var cf deploy mta_archives/products_$npm_package_version.mtar",
     "deploy": "run-s build:mta deploy:cf",
     "serve:uimodule": "ui5 serve --config=uimodule/ui5.yaml",
-    "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --dest uimodule/dist --include-task=generateManifestBundle"
+    "build:uimodule": "ui5 build --config=uimodule/ui5.yaml --clean-dest --dest uimodule/dist --include-task=generateManifestBundle",
+    "serve:launchpage": "ui5 serve --config=launchpage/ui5.yaml",
+    "build:launchpage": "ui5 build --config=launchpage/ui5.yaml --clean-dest --dest launchpage/dist --include-task=generateManifestBundle"
   },
   "devDependencies": {
     "shx": "^0.3.3",

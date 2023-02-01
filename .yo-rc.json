@@ -11,13 +11,16 @@
     "initrepo": true,
     "namespaceURI": "tutorial",
     "opa5pos": [
+      "Main",
       "Main"
     ],
     "opa5Journeys": [
+      "Main",
       "Main"
     ],
     "uimodules": [
-      "uimodule"
+      "uimodule",
+      "launchpage"
     ],
     "setupCompleted": true
   }

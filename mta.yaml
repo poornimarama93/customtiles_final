@@ -18,6 +18,10 @@ modules:
           artifacts:
             - dist/uimodule.zip
           target-path: resources/
+        - name: launchpage
+          artifacts:
+            - dist/launchpage.zip
+          target-path: resources/
   - name: productsdestination-content
     type: com.sap.application.content
     build-parameters:
@@ -55,6 +59,14 @@ modules:
       builder: custom
       commands:
         - npm run build:uimodule --prefix ..
+      supported-platforms: []
+  - name: launchpage
+    type: html5
+    path: launchpage
+    build-parameters:
+      builder: custom
+      commands:
+        - npm run build:launchpage --prefix ..
       supported-platforms: []
 resources:
   - name: products_destination
